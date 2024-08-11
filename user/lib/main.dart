@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:user/bindings/general_bindings.dart';
@@ -7,6 +8,7 @@ import 'package:user/utils/constants/text_strings.dart';
 import 'utils/theme/theme.dart';
 
 void main() async {
+  await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
   await GetStorage.init();    

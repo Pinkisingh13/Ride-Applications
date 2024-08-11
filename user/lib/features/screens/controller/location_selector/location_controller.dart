@@ -1,15 +1,13 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:user/data/authentication/authentication.dart';
 import 'package:user/utils/constants/images.dart';
-import 'package:user/utils/constants/text_strings.dart';
 import 'package:user/utils/popups/full_screen_loader.dart';
 import 'package:http/http.dart' as http;
 import 'package:user/utils/popups/loaders.dart';
-
 import '../../model/location/location_model.dart';
 import '../../view/ride_details/ride_details.dart';
 
@@ -36,7 +34,7 @@ class LocationSelectorController extends GetxController {
 
         {
           "input": query,
-          "key": TTexts.apiKey,
+          "key": dotenv.env["API_KEY"]!,
         });
 // Making Get Request
     String? response = await fetchUrl(uri);
