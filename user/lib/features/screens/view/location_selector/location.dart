@@ -9,12 +9,6 @@ import 'package:user/utils/validators/validation.dart';
 
 import '../../../../utils/constants/colors.dart';
 
-// old api key:
-// AIzaSyDKWcBeLXqroFcQak9RDdVsWmro8kkPKNQ
-
-// New key
-// AIzaSyAB54-3VD4rxu_qATXOBIlyjJnWZiiG95E
-
 class LocationSelectorScreen extends StatelessWidget {
   const LocationSelectorScreen({super.key});
 
