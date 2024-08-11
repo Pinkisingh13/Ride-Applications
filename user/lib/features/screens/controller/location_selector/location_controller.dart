@@ -19,6 +19,7 @@ class LocationSelectorController extends GetxController {
   GlobalKey<FormState> locationFormKey = GlobalKey<FormState>();
   final RxList<PlaceSuggestion> locationDetails = <PlaceSuggestion>[].obs;
   final activeField = ''.obs;
+  String apiKey = dotenv.env["API_KEY"]!;
 
   // Reactive variable to store vehicleName
   var vehicleName = ''.obs;
@@ -34,7 +35,7 @@ class LocationSelectorController extends GetxController {
 
         {
           "input": query,
-          "key": dotenv.env["API_KEY"]!,
+          "key": apiKey.toString(),
         });
 // Making Get Request
     String? response = await fetchUrl(uri);

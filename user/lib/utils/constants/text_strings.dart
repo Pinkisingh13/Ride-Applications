@@ -2,8 +2,6 @@
 /// This class contains all the App Text in String formats.
 
 class TTexts {
-  ///Api key
-  // static const String apiKey = "AIzaSyAB54-3VD4rxu_qATXOBIlyjJnWZiiG95E";
 
   // -- GLOBAL Texts
   static const String and = "and";
