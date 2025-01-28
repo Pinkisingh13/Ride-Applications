@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LocationAutoListtile extends StatelessWidget {
   const LocationAutoListtile(
@@ -15,7 +14,7 @@ class LocationAutoListtile extends StatelessWidget {
         ListTile(
           onTap: onTap,
           horizontalTitleGap: 0,
-          leading: Image(
+          leading: const Image(
             image: AssetImage("assets/images/drop_off.png"),
             height: 60,
           ),

@@ -11,7 +11,7 @@ void main() async {
   await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
-  await GetStorage.init();    
+  await GetStorage.init();
 }
 
 class MyApp extends StatelessWidget {

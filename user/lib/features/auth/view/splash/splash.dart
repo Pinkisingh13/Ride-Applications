@@ -1,10 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
+import 'package:lottie/lottie.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../screens/view/home/home.dart';
 import '../login/login.dart';
@@ -42,16 +41,26 @@ class SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       backgroundColor: TColors.white,
       body: Center(
-        child: Image(
-          image: AssetImage(
-            "assets/logos/app_logo.png",
-          ),
-          height: 300,
-          width: 300,
-        ),
+        // child: Image(
+        //   image: AssetImage(
+        //     "assets/logos/app_logo.png",
+        //   ),
+        //   height: 300,
+        //   width: 300,
+        // ),
+        child:  Lottie.asset(
+                "assets/logos/app_logo.json",
+                
+                repeat: true,
+                fit: BoxFit.contain,
+                height: 300,
+                width: 300,
+                animate: true,
+             
+              ),
       ),
     );
   }
