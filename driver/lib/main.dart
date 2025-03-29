@@ -6,11 +6,10 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'utils/theme/theme.dart';
 
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
-  await GetStorage.init();     
+  await GetStorage.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -28,3 +27,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

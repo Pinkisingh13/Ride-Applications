@@ -1,4 +1,4 @@
-import 'package:carousel_slider/carousel_slider.dart';
+
 import 'package:driver/features/screens/controller/home_controller/home_controller.dart';
 import 'package:driver/features/screens/controller/trip_controller/trip_controller.dart';
 import 'package:driver/features/screens/view/trips/widgets/pickup_dropoff.dart';
@@ -8,6 +8,7 @@ import 'package:driver/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import '../../../../common/widgets/appbar/appbar.dart';
 import 'widgets/accept_reject_buttons.dart';
 
@@ -29,7 +30,7 @@ class TripsScreen extends StatelessWidget {
             children: [
               Obx(() {
                 if (controller.rides.isEmpty) {
-                  return Center(
+                  return const Center(
                     child: Text(
                         "There is No Ride Available. Please check after sometime"),
                   );

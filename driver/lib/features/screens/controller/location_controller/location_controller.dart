@@ -24,7 +24,7 @@ class DriverLocationController extends GetxController {
     // Test if location services are enabled.
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      TLoaders.warningSnackbar(title: "Location services are disabled.");
+      TLoaders.warningSnackbar(title: "Location services are disabled."); 
       return;
     }
 
